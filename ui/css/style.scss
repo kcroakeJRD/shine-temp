@@ -1,4 +1,4 @@
-@import "compass";
+//@import "compass";
 
 /* ========================================================================= */
 /* !RESETS AND DEFAULTS */
@@ -20,6 +20,67 @@
         src:url("../fonts/JackSocial/jack-social.eot?#iefix") format("embedded-opentype"), url("../fonts/JackSocial/jack-social.ttf") format("truetype"), url("../fonts/JackSocial/jack-social.woff") format("woff"), url("../fonts/JackSocial/jack-social.svg#jack-social") format("svg");
         font-weight: normal; font-style: normal;
     }
+
+
+
+	@font-face {
+	    font-family: 'Open Sans';
+	    src: url('../fonts/open/opensans-light-webfont.eot');
+	    src: url('../fonts/open/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/open/opensans-light-webfont.woff2') format('woff2'),
+	         url('../fonts/open/opensans-light-webfont.woff') format('woff'),
+	         url('../fonts/open/opensans-light-webfont.ttf') format('truetype'),
+	         url('../fonts/open/opensans-light-webfont.svg#open_sanslight') format('svg');
+	    font-weight: 300;
+	    font-style: normal;
+
+	}
+
+
+
+
+	@font-face {
+	    font-family: 'Open Sans';
+	    src: url('../fonts/open/opensans-regular-webfont.eot');
+	    src: url('../fonts/open/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/open/opensans-regular-webfont.woff2') format('woff2'),
+	         url('../fonts/open/opensans-regular-webfont.woff') format('woff'),
+	         url('../fonts/open/opensans-regular-webfont.ttf') format('truetype'),
+	         url('../fonts/open/opensans-regular-webfont.svg#open_sansregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+
+
+
+	@font-face {
+	    font-family: 'Open Sans';
+	    src: url('../fonts/open/opensans-semibold-webfont.eot');
+	    src: url('../fonts/open/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/open/opensans-semibold-webfont.woff2') format('woff2'),
+	         url('../fonts/open/opensans-semibold-webfont.woff') format('woff'),
+	         url('../fonts/open/opensans-semibold-webfont.ttf') format('truetype'),
+	         url('../fonts/open/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+	    font-weight: 500;
+	    font-style: normal;
+
+	}
+
+	@font-face {
+	    font-family: 'Open Sans';
+	    src: url('../fonts/open/opensans-bold-webfont.eot');
+	    src: url('../fonts/open/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/open/opensans-bold-webfont.woff2') format('woff2'),
+	         url('../fonts/open/opensans-bold-webfont.woff') format('woff'),
+	         url('../fonts/open/opensans-bold-webfont.ttf') format('truetype'),
+	         url('../fonts/open/opensans-bold-webfont.svg#open_sansbold') format('svg');
+	    font-weight: bold;
+	    font-style: normal;
+
+	}
+
 
 /* ========================================================================= */
 /* !SASS VARIABLES & MIXINS */
@@ -83,12 +144,14 @@
 
 /* != LAYOUT STYLES ===== */
 
-    h1 { font: normal 24px/1.2 sans-serif; color: #f00; }
-    h2 { font: normal 24px/1.2 sans-serif; color: #f00; }
-    h3 { font: normal 24px/1.2 sans-serif; color: #f00; }
-    h4 { font: normal 24px/1.2 sans-serif; color: #f00; }
-    h5 { font: normal 24px/1.2 sans-serif; color: #f00; }
-    h6 { font: normal 24px/1.2 sans-serif; color: #f00; }
+    p { font: normal 16px/26px 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif; color: #616161; margin: 0 0 15px 0;}
+    strong{font-weight: bold;}
+    p.footnote{font: 500 12px/21px 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif; text-transform: uppercase;}
+    // h2 { font: normal 24px/1.2 sans-serif; color: #f00; }
+    // h3 { font: normal 24px/1.2 sans-serif; color: #f00; }
+    // h4 { font: normal 24px/1.2 sans-serif; color: #f00; }
+    // h5 { font: normal 24px/1.2 sans-serif; color: #f00; }
+    // h6 { font: normal 24px/1.2 sans-serif; color: #f00; }
 
     .content-main ul { }
     .content-main ul li { position: relative; padding-left: 10px; }
@@ -97,30 +160,39 @@
     .content-main ol li { position: relative; padding-left: 20px; }
     .content-main ol li:before { content:counter(li) '. '; counter-increment: li; position: absolute; left: 0; }
 
-    .wrap { width: 1100px; box-sizing: border-box; margin: 0 auto; max-width: 100%; padding: 0 20px; }
+    .wrap { width: 640px; box-sizing: border-box; margin: 192px auto 0; max-width: 100%; padding: 0 20px; text-align: center;}
 
+    main{background: url(../images/bg.jpg) no-repeat center top; position: absolute; height: 100%; width:100%; }
     
+    img{margin: 0 auto 50px;}
+	
+	.mail{text-transform: uppercase; color: #616161; font: bold 14px/16px 'Open Sans','Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif; display: block;}
+	
+	.mail:hover{color: #4A4A4A; }
+
+	ul{margin: 40px 0 35px 0; position: relative; left: -6px;}
+
+	li{display: inline-block; margin: 0 14px 0 0; font-size: 0;}
+
+	li:last-child{margin: 0;}
+
+	li a{ height: 50px; width: 50px; display: block; position: relative; color: #fff; font-size: 40px;line-height: 40px;}
+	
+	li a.social-instagram:hover, li a.social-twitter:hover{background: #dd0f7b;}
+
+	li a.social-instagram{background: #cd5959;}
+
+	li a.social-instagram:before{top: 4px; position: absolute; left: 50%; transform: translateX(-50%);}
+
+	li a.social-twitter{background: #56a3d9;}
+
+	li a.social-twitter:before{position: absolute; top: 3px; font-size: 42px; line-height: 40px;  left: 50%; transform: translateX(-50%);}
+
+	li a:before{}
 
 /* != PLACEHOLDER ATTRIBUTE STYLES = input or textarea - placeholder="whatever" ===== */
-/*
-    ::-webkit-input-placeholder { color: #aaa; }
-    :-moz-placeholder           { color: #aaa; }
-*/
 
-    form ul { margin: 0;
-        li { background: none; list-style: none;
-            div { display: inline-block; vertical-align: top; }
-        }
-    }
-
-    input {
-        &[type=text], &[type=password], &[type=url], &[type=email] {  }
-    }
-
-    input[type=submit], button { display: inline-block; cursor: pointer; 
-        &:hover {  }
-    }
-
+   
     
 /* ========================================================================= */
 /* !MEDIA QUERIES */
